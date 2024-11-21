@@ -3,7 +3,8 @@
   "scripts": {
     "build": "npx thirdweb@latest detect",
     "deploy": "npx thirdweb@latest deploy",
-    "publish": "npx thirdweb@latest publish"
+    "publish": "npx thirdweb@latest publish",
+    "logs": "npx hardhat logs"
   },
   "devDependencies": {
     "@matterlabs/hardhat-zksync-solc": "^0.3.17",
