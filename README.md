@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build and Deploy a Web3 Crowdfunding Platform (Kickstarter) As Your First Blockchain Application
 ![Crowdfunding](https://i.ibb.co/k6pj0Qt/htum-6.png)
 
@@ -5,3 +6,6 @@
 ### [🚀 Land your dream programming job in 6 months](https://jsmastery.pro/masterclass)
 
 ### Launch your development career with project-based coaching on [JS Mastery Pro](https://www.jsmastery.pro).
+=======
+# FundWeb3
+>>>>>>> d2b03a5ecb46501af3c045d449ff6d174918ce91
