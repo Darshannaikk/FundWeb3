@@ -18,7 +18,7 @@ contract CrowdFunding {
 
     uint256 public numberOfCampaigns = 0;
 
-    function createCampaign(address _owner, string memory _title, string memory _description, uint256 _target, uint256 _deadline, string memory _image) public returns(uint256) {
+    function createCampaign(address _owner, string memory _title, string memory _description, uint256 _target, uint256 _deadline, string memory _image) public returns (uint256) {
         Campaign storage campaign = campaigns[numberOfCampaigns];
 
         require(campaign.deadline < block.timestamp, "The deadline should be a date in the future.");
@@ -44,15 +44,15 @@ contract CrowdFunding {
         campaign.donators.push(msg.sender);
         campaign.donations.push(amount);
 
-        (bool sent,) = payable(campaign.owner).call{value: amout}("");
+        (bool sent,) = payable(campaign.owner).call{value: amount}("");
 
         if(sent) {
-            campaign.amountCollected = campaign.amoutCollected + amount;
+            campaign.amountCollected = campaign.amountCollected + amount;
         }
     }
 
-    function getDonators(uint256 _id) view public returns (address[] memory, uint256[] memory){
-        return(campaigns[_id].donators, campaigns[_id].donations);
+    function getDonators(uint256 _id) view public returns (address[] memory, uint256[] memory) {
+        return (campaigns[_id].donators, campaigns[_id].donations);
     }
 
     function getCampaigns() public view returns (Campaign[] memory) {
